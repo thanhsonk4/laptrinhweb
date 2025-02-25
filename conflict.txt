@@ -1,2 +1,6 @@
 đây là file test conflict
+<<<<<<< Updated upstream
 của nhánh test_conflict và main
+=======
+của nhánh test_conflict mà thôi
+>>>>>>> Stashed changes
