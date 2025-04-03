@@ -4,13 +4,14 @@
     <main class="login-form">
         <div class="container">
             <div class="row justify-content-center">
-                <table>
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Action</th>
+                            <th>Password</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -19,6 +20,7 @@
                                 <th>{{ $user->id }}</th>
                                 <th>{{ $user->name }}</th>
                                 <th>{{ $user->email }}</th>
+                                <th>{{ $user->password }}</th>
                                 <th>
                                     <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
                                     <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |

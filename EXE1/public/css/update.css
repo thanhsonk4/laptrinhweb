@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+.header, .footer {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    margin: 10px;
+}
+.footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+}
+.login-container .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.login-container .input-group label {
+    width: 80px;
+    text-align: left;
+    margin-right: 10px;
+}
+.login-container .input-group input[type="text"],
+.login-container .input-group input[type="password"],
+.login-container .input-group input[type="email"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.login-container .links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.login-container .links a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.login-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: #0056b3;
+}
