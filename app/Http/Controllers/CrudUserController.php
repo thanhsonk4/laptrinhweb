@@ -140,12 +140,19 @@ class CrudUserController extends Controller
     public function listUser()
     {
         if (Auth::check()) {
-            $users = User::paginate(10);
+            $users = User::with(['roles', 'orders'])->paginate(10)->withQueryString();
             return view('crud_user.list', ['users' => $users]);
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
+
+    public function viewOrders($id)
+    {
+        $user = \App\Models\User::with(['orders.orderDetails.product'])->findOrFail($id);
+        return view('crud_user.view_orders', compact('user'));
+    }
+
 
     /**
      * Sign out
